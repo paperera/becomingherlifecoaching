@@ -1,5 +1,6 @@
-import { type ReactNode, useEffect } from 'react';
+import { type ReactNode, useEffect, useState } from 'react';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
+import { ComingSoonPage } from '@/components/coming-soon';
 import { ErrorBoundary } from '@/components/error-boundary';
 import { Toaster } from '@/components/ui/toaster';
 import { TooltipProvider } from '@/components/ui/tooltip';
@@ -14,6 +15,7 @@ import { Route, Switch, useLocation, Router as WouterRouter } from 'wouter';
 
 const queryClient = new QueryClient();
 const projectBasePath = '/becomingherlifecoaching';
+const accessSessionKey = 'becoming-her-access-granted';
 const routeMeta: Record<string, { title: string; description: string }> = {
   '/': {
     title: 'Life Coaching for Women | Melanie Abney',
@@ -82,9 +84,16 @@ function RoutedErrorBoundary({ children }: { children: ReactNode }) {
 }
 
 function App() {
+  const [accessGranted, setAccessGranted] = useState(
+    () => window.sessionStorage.getItem(accessSessionKey) === 'granted',
+  );
   const routerBase = window.location.pathname === projectBasePath || window.location.pathname.startsWith(`${projectBasePath}/`)
     ? projectBasePath
     : '';
+
+  if (!accessGranted) {
+    return <ComingSoonPage onUnlock={() => setAccessGranted(true)} />;
+  }
 
   return (
     <QueryClientProvider client={queryClient}>

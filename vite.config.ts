@@ -10,10 +10,8 @@ if (!Number.isInteger(port) || port <= 0) {
   throw new Error(`Invalid PORT value: "${rawPort}"`);
 }
 
-const basePath = process.env.BASE_PATH || '/becomingherlifecoaching/';
-
 export default defineConfig({
-  base: basePath,
+  base: '/',
   plugins: [react(), tailwindcss()],
   resolve: {
     alias: {

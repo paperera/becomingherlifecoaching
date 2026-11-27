@@ -11,7 +11,7 @@ if (!Number.isInteger(port) || port <= 0) {
 }
 
 export default defineConfig({
-  base: '/',
+  base: './',
   plugins: [react(), tailwindcss()],
   resolve: {
     alias: {

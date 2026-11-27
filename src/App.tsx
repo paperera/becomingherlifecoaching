@@ -13,6 +13,7 @@ import NotFound from '@/pages/not-found';
 import { Route, Switch, useLocation, Router as WouterRouter } from 'wouter';
 
 const queryClient = new QueryClient();
+const projectBasePath = '/becomingherlifecoaching';
 const routeMeta: Record<string, { title: string; description: string }> = {
   '/': {
     title: 'Life Coaching for Women | Melanie Abney',
@@ -81,10 +82,14 @@ function RoutedErrorBoundary({ children }: { children: ReactNode }) {
 }
 
 function App() {
+  const routerBase = window.location.pathname === projectBasePath || window.location.pathname.startsWith(`${projectBasePath}/`)
+    ? projectBasePath
+    : '';
+
   return (
     <QueryClientProvider client={queryClient}>
       <TooltipProvider>
-        <WouterRouter base={import.meta.env.BASE_URL.replace(/\/$/, '')}>
+        <WouterRouter base={routerBase}>
           <Router />
         </WouterRouter>
         <Toaster />

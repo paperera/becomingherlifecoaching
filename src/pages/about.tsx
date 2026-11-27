@@ -5,7 +5,7 @@ export default function AboutPage() {
   return <main className="inner-page">
     <section className="inner-hero about-hero">
       <div className="inner-copy"><div className="eyebrow">A little about the person beside you</div><h1>Meet <em>Melanie Abney.</em></h1><p>A thoughtful place to share the story behind Becoming Her—and the values that guide the work.</p></div>
-      <div className="inner-image"><img src="/threshold-still-life.png" alt="A sunlit threshold with a flowering branch" width="1024" height="768" /></div>
+      <div className="inner-image"><img src={`${import.meta.env.BASE_URL}threshold-still-life.png`} alt="A sunlit threshold with a flowering branch" width="1024" height="768" /></div>
     </section>
     <section className="section story-grid">
       <div><div className="section-kicker">Melanie’s story</div><h2>Make this space <em>your own.</em></h2></div>

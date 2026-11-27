@@ -5,7 +5,7 @@ export default function ContactPage() {
   return <main className="inner-page">
     <section className="inner-hero contact-hero">
       <div className="inner-copy"><div className="eyebrow">A gentle next step</div><h1>Let’s make room for a <em>conversation.</em></h1><p>This page is a contact and booking template. Add Melanie’s real destination before inviting anyone to reach out.</p></div>
-      <div className="inner-image"><img src="/threshold-still-life.png" alt="An open doorway and flowering branch in warm daylight" width="1024" height="768" /></div>
+      <div className="inner-image"><img src={`${import.meta.env.BASE_URL}threshold-still-life.png`} alt="An open doorway and flowering branch in warm daylight" width="1024" height="768" /></div>
     </section>
     <section className="section contact-layout">
       <div><div className="section-kicker">Contact details</div><h2>Make the next step <em>clear.</em></h2><p>Use the prompts below to add verified contact details or a real booking destination. No contact details have been invented.</p></div>

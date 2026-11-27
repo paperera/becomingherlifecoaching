@@ -19,7 +19,7 @@ export function SiteShell({ children }: { children: ReactNode }) {
       <div className="announcement">A space for your next chapter · Becoming Her Life Coaching</div>
       <header className="header">
         <Link href="/" className="brand" aria-label="Becoming Her Life Coaching home" onClick={closeMenu} data-testid="link-brand-home">
-          <span className="brand-mark" aria-hidden="true">B</span>
+          <img className="brand-mark" src={`${import.meta.env.BASE_URL}logo.png`} alt="" />
           <span className="brand-name">Becoming Her<small>with Melanie Abney</small></span>
         </Link>
         <button className="menu-toggle" type="button" aria-label={menuOpen ? 'Close navigation' : 'Open navigation'} aria-expanded={menuOpen} aria-controls="main-navigation" onClick={() => setMenuOpen(!menuOpen)} data-testid="button-menu-toggle">
@@ -33,7 +33,7 @@ export function SiteShell({ children }: { children: ReactNode }) {
       {children}
       <footer className="footer">
         <Link href="/" className="brand" aria-label="Becoming Her Life Coaching home" data-testid="link-footer-home">
-          <span className="brand-mark" aria-hidden="true">B</span>
+          <img className="brand-mark" src={`${import.meta.env.BASE_URL}logo.png`} alt="" />
           <span className="brand-name">Becoming Her<small>with Melanie Abney</small></span>
         </Link>
         <span className="footer-copy">A thoughtful space for women considering what comes next.</span>

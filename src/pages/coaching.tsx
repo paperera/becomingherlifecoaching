@@ -5,7 +5,7 @@ export default function CoachingPage() {
   return <main className="inner-page">
     <section className="inner-hero coaching-hero">
       <div className="inner-copy"><div className="eyebrow">A collaborative conversation</div><h1>Coaching, at <em>your pace.</em></h1><p>Explore what a coaching practice could offer, with the real details ready for Melanie to add.</p></div>
-      <div className="inner-image"><img src="/threshold-still-life.png" alt="Soft afternoon light on an open doorway" width="1024" height="768" /></div>
+      <div className="inner-image"><img src={`${import.meta.env.BASE_URL}threshold-still-life.png`} alt="Soft afternoon light on an open doorway" width="1024" height="768" /></div>
     </section>
     <section className="section intro">
       <div><div className="section-kicker">A place to explore</div><h2>What would feel useful <em>right now?</em></h2></div>

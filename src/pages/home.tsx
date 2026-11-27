@@ -15,7 +15,7 @@ export default function HomePage() {
         </div>
       </div>
       <div className="hero-visual">
-        <img src="/threshold-still-life.png" alt="Late-afternoon light falling across an open doorway and a blossoming branch" width="1024" height="768" fetchPriority="high" />
+        <img src={`${import.meta.env.BASE_URL}threshold-still-life.png`} alt="Late-afternoon light falling across an open doorway and a blossoming branch" width="1024" height="768" fetchPriority="high" />
         <div className="hero-stamp" aria-hidden="true">There is<br />another way<br />forward</div>
         <div className="hero-note">A little space to begin again.</div>
       </div>
@@ -32,7 +32,7 @@ export default function HomePage() {
       </div>
     </section>
     <section className="section change">
-      <div className="change-visual"><img src="/threshold-still-life.png" alt="" width="1024" height="768" loading="lazy" /><div className="change-caption">A moment to meet yourself where you are.</div></div>
+      <div className="change-visual"><img src={`${import.meta.env.BASE_URL}threshold-still-life.png`} alt="" width="1024" height="768" loading="lazy" /><div className="change-caption">A moment to meet yourself where you are.</div></div>
       <div className="change-content">
         <div className="section-kicker">Your life, your pace</div><h2>Change doesn’t have to start with a <em>grand plan.</em></h2>
         <p>It can start with noticing what feels heavy, what feels hopeful, and what you’ve been setting aside. Coaching isn’t about being told who to become. It’s a conversation that helps you hear your own answers more clearly.</p>
